@@ -1,0 +1,18 @@
+version: '3'
+services:
+  development-db:
+    image: mysql
+    container_name: development_nestjs
+    ports:
+      - 9991:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: development_nestjs
+  test-db:
+    image: mysql
+    container_name: test_nestjs
+    ports:
+      - 9992:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_nestjs
